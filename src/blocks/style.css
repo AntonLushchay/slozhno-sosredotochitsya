@@ -1,5 +1,77 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.header {
+    position: relative;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 1024px;
+    height: 768px;
+    margin: auto;
+    background-image: url('../images/cover-image-dark.png');
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.header__theme-menu-button {
+    width: 70px;
+    height: 26px;
+    border: 1px solid transparent;
+    color: #ff0070;
+    font-family: 'IBM Plex mono', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-transform: lowercase;
+    background: transparent;
+    cursor: pointer;
+}
+
+.header__decoration-element {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 52px;
+    min-height: 26px;
+    color: #ff0070;
+    inset-block-start: 19px;
+    inset-inline-end: 29px;
+}
+
+.header__decoration-element_text {
+    color: inherit;
+    font-family: 'IBM Plex mono', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.header__decoration-element_circle {
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px #ff0070;
+    background-color: #ff0070;
+    block-size: 8px;
+    inline-size: 8px;
+}
+
+.header__decoration-element_circle::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-top: 1px solid inherit;
+    border-right: 1px solid inherit;
+    block-size: 25px;
+    inline-size: 25px;
+    inset-inline-start: 39px;
+    inset-block-start: 0;
 }
