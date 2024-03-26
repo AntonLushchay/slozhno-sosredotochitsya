@@ -45,7 +45,7 @@ function html() {
 function css() {
     const plugins = [autoprefixer(), mediaquery(), cssnano()];
     return gulp
-        .src('src/blocks/**/*.css')
+        .src('src/2blocks/**/*.css')
         .pipe(plumber())
         .pipe(concat('bundle.css'))
         .pipe(postcss(plugins))
@@ -53,18 +53,18 @@ function css() {
         .pipe(browserSync.reload({ stream: true }));
 }
 
+function fonts() {
+    return gulp
+        .src('src/1fonts/**/*.{css,woff}')
+        .pipe(plumber())
+        .pipe(gulp.dest('dist/fonts'))
+        .pipe(browserSync.reload({ stream: true }));
+}
+
 function images() {
     return gulp
         .src('src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}')
         .pipe(gulp.dest('dist/images'))
-        .pipe(browserSync.reload({ stream: true }));
-}
-
-function fonts() {
-    return gulp
-        .src('src/fonts/**/*.css')
-        .pipe(plumber())
-        .pipe(gulp.dest('dist/fonts'))
         .pipe(browserSync.reload({ stream: true }));
 }
 
@@ -82,9 +82,9 @@ function clean() {
 
 function watchFiles() {
     gulp.watch(['src/**/*.html'], html);
-    gulp.watch(['src/blocks/**/*.css'], css);
+    gulp.watch(['src/2blocks/**/*.css'], css);
     gulp.watch(['src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
-    gulp.watch(['src/fonts/**/*.css'], fonts);
+    gulp.watch(['src/1fonts/**/*.css'], fonts);
     gulp.watch(['src/scripts/**/*.js'], scripts);
 }
 
@@ -92,7 +92,7 @@ const build = gulp.series(
     clean,
     gulp.parallel(html, css, images, fonts, scripts)
 );
-const watchapp = gulp.parallel(build, watchFiles, serve);
+const watchapp = gulp.series(build, gulp.parallel(watchFiles, serve));
 
 exports.clean = clean;
 exports.fonts = fonts;
