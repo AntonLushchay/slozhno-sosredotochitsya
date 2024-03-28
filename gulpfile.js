@@ -6,7 +6,7 @@ const browserSync = require('browser-sync').create();
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const mediaquery = require('postcss-combine-media-query');
-const cssnano = require('cssnano');
+// const cssnano = require('cssnano');
 const htmlMinify = require('html-minifier');
 
 function serve() {
@@ -43,7 +43,7 @@ function html() {
 }
 
 function css() {
-    const plugins = [autoprefixer(), mediaquery(), cssnano()];
+    const plugins = [autoprefixer(), mediaquery() /*, cssnano()*/];
     return gulp
         .src('src/2blocks/**/*.css')
         .pipe(plumber())
