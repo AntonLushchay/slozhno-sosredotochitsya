@@ -1,19 +1,95 @@
-@media (prefers-color-scheme: dark) {
-    .page.theme_dark {
-        --header__background-image: url('../images/cover-image-dark.png');
-        --main-text-color: #ff0070;
-        --header__decoration-element: flex;
-        --header__title-color: #db00ff;
-        --text-background: #ff0070;
-    }
+.page.theme_dark {
+    --primary-color: #ff0070;
+    --primary-text-color: #000028;
+    --secondary-text-color: #f1b2ce;
+    --main-background-color: #000028;
+}
+
+.page.theme_dark .header {
+    background-image: url('../images/cover-image-dark.png');
+}
+
+.page.theme_dark .header__theme-menu-button {
+    color: var(--primary-color);
+}
+
+.page.theme_dark .header__decoration-element {
+    display: flex;
+}
+
+.page.theme_dark .header__decoration-element_circle {
+    box-shadow: 0 0 3px 3px var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.page.theme_dark .decorated-zone::before {
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+}
+
+.page.theme_dark .decorated-zone::after {
+    border-bottom: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+}
+
+.page.theme_dark .header__title {
+    color: #db00ff;
+    text-shadow: 4px 4px var(--primary-color);
+}
+
+.page.theme_dark .section h2 {
+    color: var(--primary-color);
+}
+
+.page.theme_dark .section p {
+    color: var(--secondary-text-color);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --header__background-image: url('../images/cover-image-dark.png');
-        --main-text-color: #ff0070;
-        --header__decoration-element: flex;
-        --header__title-color: #db00ff;
-        --text-background: #ff0070;
+    .page.theme_auto {
+        --primary-color: #ff0070;
+        --primary-text-color: #000028;
+        --secondary-text-color: #f1b2ce;
+        --main-background-color: #000028;
+    }
+
+    .page.theme_auto .header {
+        background-image: url('../images/cover-image-dark.png');
+    }
+
+    .page.theme_auto .header__theme-menu-button {
+        color: var(--primary-color);
+    }
+
+    .page.theme_auto .header__decoration-element {
+        display: flex;
+    }
+
+    .page.theme_auto .header__decoration-element_circle {
+        box-shadow: 0 0 3px 3px var(--primary-color);
+        background-color: var(--primary-color);
+    }
+
+    .page.theme_auto .decorated-zone::before {
+        border-top: 1px solid var(--primary-color);
+        border-right: 1px solid var(--primary-color);
+    }
+
+    .page.theme_auto .decorated-zone::after {
+        border-bottom: 1px solid var(--primary-color);
+        border-left: 1px solid var(--primary-color);
+    }
+
+    .page.theme_auto .header__title {
+        color: #db00ff;
+        text-shadow: 4px 4px var(--primary-color);
+    }
+
+    .page.theme_auto .section h2 {
+        color: var(--primary-color);
+    }
+
+    .page.theme_auto .section p {
+        color: var(--secondary-text-color);
     }
 }

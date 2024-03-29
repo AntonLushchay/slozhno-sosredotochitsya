@@ -1,17 +1,83 @@
 .page.theme_light {
-    --header__background-image: url('../images/cover-image-light.png');
-    --main-text-color: #353430;
-    --header__decoration-element: none;
-    --header__title-color: #ffc2e6;
-    --text-background: #ff8dcb;
+    --primary-color: #ffc2e6;
+    --primary-text-color: #353430;
+    --main-background-color: #fff1f7;
+}
+
+.page.theme_light .header {
+    background-image: url('../images/cover-image-light.png');
+}
+
+.page.theme_light .header__theme-menu-button {
+    color: var(--primary-text-color);
+}
+
+.page.theme_light .header__decoration-element {
+    display: none;
+}
+
+.page.theme_light .decorated-zone::before {
+    border-top: 1px solid var(--primary-text-color);
+    border-right: 1px solid var(--primary-text-color);
+}
+
+.page.theme_light .decorated-zone::after {
+    border-bottom: 1px solid var(--primary-text-color);
+    border-left: 1px solid var(--primary-text-color);
+}
+
+.page.theme_light .header__title {
+    color: var(--primary-color);
+    text-shadow: 4px 4px #ff0070;
+}
+
+.page.theme_light.section h2 {
+    color: var(--primary-text-color);
+}
+
+.page.theme_light .section p {
+    color: var(--primary-text-color);
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --header__background-image: url('../images/cover-image-light.png');
-        --main-text-color: #353430;
-        --header__decoration-element: none;
-        --header__title-color: #ffc2e6;
-        --text-background: #ff8dcb;
+    .page.theme_auto {
+        --primary-color: #ffc2e6;
+        --primary-text-color: #353430;
+        --main-background-color: #fff1f7;
+    }
+
+    .page.theme_auto .header {
+        background-image: url('../images/cover-image-light.png');
+    }
+
+    .page.theme_auto .header__theme-menu-button {
+        color: var(--primary-text-color);
+    }
+
+    .page.theme_auto .header__decoration-element {
+        display: none;
+    }
+
+    .page.theme_auto .decorated-zone::before {
+        border-top: 1px solid var(--primary-text-color);
+        border-right: 1px solid var(--primary-text-color);
+    }
+
+    .page.theme_auto .decorated-zone::after {
+        border-bottom: 1px solid var(--primary-text-color);
+        border-left: 1px solid var(--primary-text-color);
+    }
+
+    .page.theme_auto .header__title {
+        color: var(--primary-color);
+        text-shadow: 4px 4px #ff0070;
+    }
+
+    .page.theme_auto.section h2 {
+        color: var(--primary-text-color);
+    }
+
+    .page.theme_auto .section p {
+        color: var(--primary-text-color);
     }
 }
