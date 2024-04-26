@@ -9,35 +9,35 @@
 }
 
 .header {
-    min-height: 100vh;
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    min-height: 100vh;
 }
 
 .decorated-zone::before {
     content: '';
     position: absolute;
     display: block;
+    border-top: 1px solid var(--decorated-zone-color);
+    border-right: 1px solid var(--decorated-zone-color);
     block-size: 25px;
     inline-size: 25px;
     inset-inline-end: 20px;
     inset-block-start: 20px;
-    border-top: 1px solid var(--decorated-zone-color);
-    border-right: 1px solid var(--decorated-zone-color);
 }
 
 .decorated-zone::after {
     content: '';
     position: absolute;
     display: block;
+    border-bottom: 1px solid var(--decorated-zone-color);
+    border-left: 1px solid var(--decorated-zone-color);
     block-size: 25px;
     inline-size: 25px;
     inset-inline-start: 20px;
     inset-block-end: 20px;
-    border-bottom: 1px solid var(--decorated-zone-color);
-    border-left: 1px solid var(--decorated-zone-color);
 }
 
 .header__theme-menu-list {
@@ -52,6 +52,7 @@
     width: 70px;
     height: 26px;
     border: 1px solid transparent;
+    color: var(--button-color);
     font-family: var(--fonts);
     font-weight: normal;
     font-size: 18px;
@@ -59,7 +60,6 @@
     background: transparent;
     cursor: pointer;
     user-select: none;
-    color: var(--button-color);
 }
 
 .header__theme-menu-button_active {
@@ -81,6 +81,7 @@
 
 .header__decoration-element {
     position: absolute;
+    display: var(--diplay-of-decor-elem);
     align-items: center;
     gap: 12px;
     min-width: 52px;
@@ -89,7 +90,6 @@
     user-select: none;
     inset-block-start: 19px;
     inset-inline-end: 28px;
-    display: var(--diplay-of-decor-elem);
 }
 
 .header__decoration-element_text {
@@ -102,10 +102,10 @@
 
 .header__decoration-element_circle {
     border-radius: 50%;
-    block-size: 7px;
-    inline-size: 7px;
     box-shadow: 0 0 3px 3px var(--decoration-element-color);
     background-color: var(--decoration-element-color);
+    block-size: 7px;
+    inline-size: 7px;
 }
 
 .header__title-conteiner {
@@ -117,11 +117,11 @@
 }
 
 .header__title {
+    color: var(--title-text-color);
     font-family: var(--fonts);
     font-weight: bold;
     font-size: clamp(7.5rem, 0.5262rem + 14.5098vw, 9.8125rem);
     text-transform: lowercase;
-    color: var(--title-text-color);
     text-shadow: 4px 4px #ff0070;
 }
 
@@ -185,13 +185,13 @@
 
     .header__title {
         padding-left: 10px;
-        line-height: 95.7px;
         font-size: 116px;
+        line-height: 95.7px;
     }
 
     .header__content {
-        margin-right: 10px;
         width: 355px;
+        margin-right: 10px;
     }
 }
 /* header */
@@ -225,6 +225,7 @@ main {
 .article {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 10px;
     line-height: 23.4px;
 }
@@ -254,8 +255,8 @@ main {
 
 .section h2 {
     padding-left: 20px;
-    font-size: inherit;
     color: var(--section-title-color);
+    font-size: inherit;
 }
 
 .section p {
@@ -274,12 +275,12 @@ main {
 
 .section:nth-child(2) .main__section_article-wrapper {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0 20px;
 }
 
 .section:nth-child(2) .article {
-    flex-basis: 314px;
+    flex-basis: 315px;
     padding: 0;
 }
 
@@ -291,7 +292,7 @@ main {
     background-color: var(--background-text-color);
 }
 
-.section:nth-child(3) article > h4 {
+.article > h4 {
     font-weight: normal;
 }
 
@@ -334,8 +335,8 @@ main {
 
 .img_sreet {
     grid-area: street;
-    margin-top: 5px;
     height: 98%;
+    margin-top: 5px;
 }
 
 li > img {
@@ -347,8 +348,8 @@ li > img {
 
 /* footer */
 .footer {
-    display: flex;
     position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -358,8 +359,8 @@ li > img {
 }
 
 .footer_title {
-    font-size: 157px;
     color: var(--title-text-color);
+    font-size: 157px;
     text-shadow: 2px 2px #ff0070;
 }
 
