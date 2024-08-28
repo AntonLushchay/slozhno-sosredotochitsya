@@ -1,4 +1,5 @@
 {
+    "homepage": "https://antonlushchay.github.io/slozhno-sosredotochitsya",
     "name": "hard_to_concentrate",
     "version": "1.0.0",
     "description": "test of description",
@@ -13,7 +14,8 @@
         "fixAll": "npm run format && npm run lintfix",
         "build": "gulp build",
         "dev": "gulp",
-        "fixAndPush": "npm run fixAll && git add . && git commit && git push"
+        "fixAndPush": "npm run fixAll && git add . && git commit && git push",
+        "deploy": "gh-pages -d dist"
     },
     "author": "",
     "license": "ISC",
@@ -22,6 +24,7 @@
         "browser-sync": "^3.0.2",
         "cssnano": "^6.1.1",
         "del": "^6.0.0",
+        "gh-pages": "^6.1.1",
         "gulp": "^4.0.2",
         "gulp-concat-css": "^3.1.0",
         "gulp-plumber": "^1.2.1",
