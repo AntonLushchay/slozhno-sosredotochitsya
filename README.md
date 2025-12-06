@@ -2,6 +2,7 @@
 
 ![Статус проекта](https://img.shields.io/badge/Status-Completed-success)
 ![Project Status](https://img.shields.io/badge/status-educational-orange)
+![Build tool](https://img.shields.io/badge/Build%20tool-Gulp-646CFF)
 
 Веб-приложение с полезными материалами о том, почему нам сложно сосредоточиться и как с этим бороться. Проект представляет собой лендинг с адаптивной версткой и возможностью переключения цветовой темы.
 
