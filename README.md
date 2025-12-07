@@ -1,8 +1,16 @@
 # Сложно сосредоточиться
 
-![Статус проекта](https://img.shields.io/badge/Status-Completed-success)
-![Project Status](https://img.shields.io/badge/status-educational-orange)
-![Build tool](https://img.shields.io/badge/Build%20tool-Gulp-646CFF)
+![Status](https://img.shields.io/badge/status-Completed-darkgreen)
+![Type](https://img.shields.io/badge/type-Educational-orange)
+![CI/CD](https://img.shields.io/badge/deploy-GitHub%20Pages-blue)
+![Audience](https://img.shields.io/badge/audience-Portfolio-purple)
+
+![HTML](https://img.shields.io/badge/HTML-5-red?logo=html5)
+![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css)
+![BEM](https://img.shields.io/badge/BEM-444444)
+![Gulp](https://img.shields.io/badge/Gulp-444444?logo=gulp)
+![Prettier](https://img.shields.io/badge/Prettier-444444?logo=prettier)
+![Stylelint](https://img.shields.io/badge/Stylelint-444444?logo=stylelint)
 
 Веб-приложение с полезными материалами о том, почему нам сложно сосредоточиться и как с этим бороться. Проект представляет собой лендинг с адаптивной версткой и возможностью переключения цветовой темы.
 
